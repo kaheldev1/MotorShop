@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop | FKLDL Motor Shop</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Russo+One&family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Shop</h1>
+    <p>Motorcycle parts, clothing, accessories, services, and custom modifications</p>
+  </header>
+    
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="shop.html" class="active">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  
+  <button class="cart-btn"><i class="fas fa-shopping-cart"></i> Cart <span class="cart-count">0</span></button>
+
+  <div class="cart-modal">
+    <div class="cart-content">
+      <span class="close-cart">&times;</span>
+      <h2>Your Cart</h2>
+      <div class="cart-items"></div>
+      <p class="cart-total">Total: ₱0</p>
+
+      <div class="payment-methods">
+        <label><input type="radio" name="payment" value="GCash"> GCash</label>
+        <label><input type="radio" name="payment" value="PayMaya"> PayMaya</label>
+        <label><input type="radio" name="payment" value="Cash on Delivery"> Cash on Delivery</label>
+      </div>
+
+      <div id="phone-input-container" style="display:none;">
+        <label for="phone-number">Mobile Number:</label>
+        <input type="tel" id="phone-number" placeholder="e.g., 09171234567" maxlength="11" required>
+      </div>
+
+      <button class="confirm-payment">Confirm Payment</button>
+    </div>
+  </div>
+
+  <div id="cart-notification">Item added to cart</div>
+
+  <section class="categories">
+    <a href="#parts"><button><i class="fas fa-cogs"></i> Parts</button></a>
+    <a href="#clothing"><button><i class="fas fa-tshirt"></i> Clothing</button></a>
+    <a href="#accessories"><button><i class="fas fa-tools"></i> Accessories</button></a>
+    <a href="#services"><button><i class="fas fa-wrench"></i> Services</button></a>
+    <a href="#custom-mods"><button><i class="fas fa-star"></i> Custom Mods</button></a>
+  </section>
+
+  <section class="content" id="all">
+    <h2 id="parts"><i class="fas fa-cogs"></i> Parts</h2>
+    <div class="features">
+      <div class="card"><h3>Engine Oil</h3><p>₱350</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Brake Pads</h3><p>₱450</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Spark Plug Set</h3><p>₱200</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Air Filter</h3><p>₱300</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Chain & Sprocket Kit</h3><p>₱1,500</p><a href="#" class="add-cart">Add to Cart</a></div>
+    </div>
+
+    <h2 id="clothing"><i class="fas fa-tshirt"></i> Clothing</h2>
+    <div class="features">
+      <div class="card"><h3>Motorcycle Helmet</h3><p>₱1,200</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Riding Jacket</h3><p>₱3,200</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Riding Gloves</h3><p>₱800</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Riding Boots</h3><p>₱2,500</p><a href="#" class="add-cart">Add to Cart</a></div>
+    </div>
+
+    <h2 id="accessories"><i class="fas fa-tools"></i> Accessories</h2>
+    <div class="features">
+      <div class="card"><h3>LED Headlight</h3><p>₱800</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Phone Holder</h3><p>₱450</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Side Mirrors (Pair)</h3><p>₱900</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Luggage Box</h3><p>₱2,000</p><a href="#" class="add-cart">Add to Cart</a></div>
+    </div>
+
+    <h2 id="services"><i class="fas fa-wrench"></i> Services</h2>
+    <div class="features">
+      <div class="card"><h3>Oil Change Service</h3><p>₱500</p><a href="contact.html">Book Now</a></div>
+      <div class="card"><h3>Brake Adjustment</h3><p>₱350</p><a href="contact.html">Book Now</a></div>
+      <div class="card"><h3>Tire Replacement</h3><p>₱600</p><a href="contact.html">Book Now</a></div>
+      <div class="card"><h3>Engine Tune-Up</h3><p>₱1,200</p><a href="contact.html">Book Now</a></div>
+    </div>
+
+    <h2 id="custom-mods"><i class="fas fa-star"></i> Custom Mods</h2>
+    <div class="features">
+      <div class="card"><h3>Exhaust Upgrade</h3><p>₱4,500</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Custom Paint Job</h3><p>₱6,000</p><a href="contact.html">Book Now</a></div>
+      <div class="card"><h3>LED Under-glow Kit</h3><p>₱2,200</p><a href="#" class="add-cart">Add to Cart</a></div>
+      <div class="card"><h3>Performance ECU</h3><p>₱7,800</p><a href="#" class="add-cart">Add to Cart</a></div>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 FKLDL Motor Shop | All Rights Reserved</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
